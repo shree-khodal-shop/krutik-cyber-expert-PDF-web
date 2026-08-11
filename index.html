@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KRUTIK CYBER EXPERT — Free Course PDFs</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+  :root{
+    --ink:#0D1117;
+    --ink-deep:#080A0E;
+    --paper:#F4F6F5;
+    --slate:#8B95A1;
+    --green:#39D98A;
+    --bad:#E5534B;
+    --card:#11151C;
+    --card-border:#1E242D;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'Inter',sans-serif;
+    min-height:100vh;
+  }
+  ::selection{background:var(--green);color:var(--ink);}
+  .display{font-family:'Space Grotesk',sans-serif;}
+  .mono{font-family:'JetBrains Mono',monospace;}
+
+  header{
+    position:sticky; top:0; z-index:10;
+    background:var(--ink-deep);
+    border-bottom:1px solid #1B2027;
+    padding:14px 20px;
+  }
+  .header-inner{
+    max-width:1100px; margin:0 auto;
+    display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+  }
+  .logo{
+    width:36px;height:36px;border-radius:8px;
+    background:var(--green); color:var(--ink);
+    display:flex; align-items:center; justify-content:center;
+    font-weight:700; font-size:18px; flex-shrink:0;
+  }
+  .brand h1{
+    font-size:17px; font-weight:700; margin:0; letter-spacing:0.3px;
+  }
+  .brand p{
+    font-size:10.5px; color:var(--slate); margin:3px 0 0;
+  }
+  #search{
+    flex:1; min-width:180px;
+    background:#161B22; border:1px solid #232A33; color:var(--paper);
+    padding:10px 14px; border-radius:8px; font-size:14px;
+  }
+  #search::placeholder{color:var(--slate);}
+
+  main{max-width:1100px; margin:0 auto; padding:0 20px 80px;}
+
+  .hero{padding:44px 0 30px; border-bottom:1px solid #1B2027;}
+  .eyebrow{color:var(--green); font-size:12px; letter-spacing:1.5px; margin:0;}
+  .hero h2{
+    font-size:clamp(26px,5vw,42px); font-weight:700; line-height:1.15;
+    margin:10px 0 12px; max-width:640px;
+  }
+  .hero p{color:var(--slate); font-size:15px; max-width:520px; margin:0;}
+  .stats{display:flex; gap:28px; margin-top:22px;}
+  .stat b{display:block; font-size:24px; font-weight:700;}
+  .stat span{font-size:12px; color:var(--slate);}
+
+  .filters{
+    display:flex; gap:8px; flex-wrap:wrap; align-items:center;
+    margin-top:22px;
+  }
+  .chip{
+    background:transparent; border:1px solid #232A33; color:var(--slate);
+    padding:6px 12px; border-radius:999px; font-size:12px; cursor:pointer;
+  }
+  .chip.active{background:var(--green); border-color:var(--green); color:var(--ink); font-weight:600;}
+
+  .grid{
+    display:grid; gap:16px; margin-top:22px;
+    grid-template-columns:repeat(auto-fill, minmax(260px,1fr));
+  }
+  .card{
+    background:var(--card); border:1px solid var(--card-border);
+    border-radius:12px; overflow:hidden; display:flex;
+  }
+  .card .tag-bar{width:4px; flex-shrink:0;}
+  .card-body{padding:16px; display:flex; flex-direction:column; flex:1; min-width:0;}
+  .cat{font-size:10px; font-weight:700; letter-spacing:0.5px;}
+  .card h3{font-size:16px; font-weight:600; margin:8px 0 0; line-height:1.3;}
+  .card p.desc{color:#7C8794; font-size:13px; margin:6px 0 0; line-height:1.4;
+    display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;}
+  .card-foot{
+    display:flex; align-items:center; justify-content:space-between;
+    margin-top:14px; padding-top:12px; border-top:1px solid var(--card-border);
+  }
+  .meta{color:#5B6572; font-size:11px;}
+  .dl-btn{
+    background:var(--green); color:var(--ink); border:none;
+    padding:7px 12px; border-radius:8px; font-size:12px; font-weight:600;
+    cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; gap:6px;
+  }
+
+  .empty{
+    text-align:center; padding:80px 20px; color:var(--slate);
+  }
+  .empty .icon{
+    width:64px;height:64px;border-radius:50%;
+    background:#161B22; border:1px solid #232A33;
+    display:flex; align-items:center; justify-content:center;
+    margin:0 auto 16px; font-size:24px;
+  }
+  .empty h3{color:var(--paper); font-size:19px; margin:0 0 6px;}
+
+  footer{
+    max-width:1100px; margin:0 auto; padding:24px 20px;
+    border-top:1px solid #1B2027; color:#3F4650; font-size:11px;
+  }
+
+  @media (max-width:520px){
+    .stats{gap:18px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">K</div>
+    <div class="brand">
+      <h1 class="display">KRUTIK CYBER EXPERT</h1>
+      <p class="mono" id="countLabel">0 PDF · Free Course Downloads</p>
+    </div>
+    <input id="search" type="text" placeholder="Search by title or topic…" />
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow mono">100% FREE · NO SIGN-UP REQUIRED</p>
+    <h2 class="display">Every course PDF, one click away.</h2>
+    <p>This is the KRUTIK CYBER EXPERT course library — free study material, download anytime.</p>
+    <div class="stats">
+      <div class="stat"><b class="display" id="statTotal">0</b><span>Total PDFs</span></div>
+      <div class="stat"><b class="display" id="statCats">0</b><span>Categories</span></div>
+    </div>
+  </section>
+
+  <div class="filters" id="filters"></div>
+
+  <div id="grid" class="grid"></div>
+  <div id="emptyState" class="empty" style="display:none;">
+    <div class="icon">📄</div>
+    <h3 class="display" id="emptyTitle">No files yet</h3>
+    <p id="emptyText">Check back soon — new PDFs are added regularly.</p>
+  </div>
+</main>
+
+<footer>
+  KRUTIK CYBER EXPERT — all course PDFs are free to download.
+</footer>
+
+<script>
+  const TAG_COLORS = ["#39D98A", "#5B9DFF", "#E5A83D", "#B25FE0", "#E5534B", "#4CC9D9"];
+
+  function hashStr(s){
+    let h = 0;
+    for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
+    return h;
+  }
+  function tagColor(cat){
+    return TAG_COLORS[hashStr(cat || "General") % TAG_COLORS.length];
+  }
+  function formatBytes(bytes){
+    if (bytes === undefined || bytes === null) return "—";
+    if (bytes < 1024) return bytes + " B";
+    if (bytes < 1024*1024) return (bytes/1024).toFixed(1) + " KB";
+    return (bytes/(1024*1024)).toFixed(2) + " MB";
+  }
+  function formatDate(iso){
+    try{
+      return new Date(iso).toLocaleDateString("en-IN", { day:"2-digit", month:"short", year:"numeric" });
+    }catch(e){ return "—"; }
+  }
+
+  let allFiles = [];
+  let activeCategory = "All";
+
+  function render(){
+    const query = document.getElementById("search").value.trim().toLowerCase();
+    const grid = document.getElementById("grid");
+    const empty = document.getElementById("emptyState");
+
+    const filtered = allFiles.filter(f => {
+      const matchesQuery = !query ||
+        f.title.toLowerCase().includes(query) ||
+        (f.description || "").toLowerCase().includes(query);
+      const matchesCat = activeCategory === "All" || (f.category || "General") === activeCategory;
+      return matchesQuery && matchesCat;
+    });
+
+    grid.innerHTML = "";
+    if (filtered.length === 0){
+      grid.style.display = "none";
+      empty.style.display = "block";
+      document.getElementById("emptyTitle").textContent = allFiles.length === 0 ? "No files yet" : "No results found";
+      document.getElementById("emptyText").textContent = allFiles.length === 0
+        ? "Check back soon — new PDFs are added regularly."
+        : "Try a different search or filter.";
+      return;
+    }
+    grid.style.display = "grid";
+    empty.style.display = "none";
+
+    filtered.forEach(f => {
+      const tag = tagColor(f.category);
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <div class="tag-bar" style="background:${tag}"></div>
+        <div class="card-body">
+          <span class="cat mono" style="color:${tag}">${(f.category || "GENERAL").toUpperCase()}</span>
+          <h3 class="display">${escapeHtml(f.title)}</h3>
+          ${f.description ? `<p class="desc">${escapeHtml(f.description)}</p>` : ""}
+          <div class="card-foot">
+            <span class="meta mono">${formatBytes(f.size)} · ${formatDate(f.uploadDate)}</span>
+            <a class="dl-btn" href="pdfs/${encodeURIComponent(f.filename)}" download>⬇ Download</a>
+          </div>
+        </div>`;
+      grid.appendChild(card);
+    });
+  }
+
+  function escapeHtml(s){
+    const d = document.createElement("div");
+    d.textContent = s;
+    return d.innerHTML;
+  }
+
+  function renderFilters(){
+    const cats = ["All", ...new Set(allFiles.map(f => f.category || "General"))];
+    const box = document.getElementById("filters");
+    box.innerHTML = "";
+    cats.forEach(c => {
+      const btn = document.createElement("button");
+      btn.className = "chip" + (c === activeCategory ? " active" : "");
+      btn.textContent = c;
+      btn.onclick = () => { activeCategory = c; renderFilters(); render(); };
+      box.appendChild(btn);
+    });
+  }
+
+  document.getElementById("search").addEventListener("input", render);
+
+  fetch("pdfs.json?_=" + Date.now())
+    .then(r => r.json())
+    .then(data => {
+      allFiles = Array.isArray(data) ? data : [];
+      allFiles.sort((a,b) => new Date(b.uploadDate) - new Date(a.uploadDate));
+      document.getElementById("statTotal").textContent = allFiles.length;
+      document.getElementById("statCats").textContent = new Set(allFiles.map(f => f.category || "General")).size;
+      document.getElementById("countLabel").textContent = allFiles.length + " PDF · Free Course Downloads";
+      renderFilters();
+      render();
+    })
+    .catch(() => {
+      document.getElementById("emptyTitle").textContent = "Couldn't load the list";
+      document.getElementById("emptyText").textContent = "pdfs.json not found or invalid.";
+      document.getElementById("emptyState").style.display = "block";
+    });
+</script>
+</body>
+</html>
