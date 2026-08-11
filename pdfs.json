@@ -22,5 +22,29 @@
     "filename": "termux-telegram-bot-hacking-course.pdf",
     "size": 500000,
     "uploadDate": "2026-08-11"
+  },
+  {
+    "title": "Cyber Security Basics",
+    "description": "Beginner level cyber security notes",
+    "category": "Cyber Security",
+    "filename": "cyber-security-basics.pdf",
+    "size": 500000,
+    "uploadDate": "2026-08-11"
+  },
+  {
+    "title": "CSS Code Learn",
+    "description": "Complete CSS course notes",
+    "category": "Coding",
+    "filename": "css-code-learn.pdf",
+    "size": 500000,
+    "uploadDate": "2026-08-11"
+  },
+  {
+    "title": "JavaScript Code Learn",
+    "description": "Complete JavaScript course notes",
+    "category": "Coding",
+    "filename": "javascript-code-learn.pdf",
+    "size": 500000,
+    "uploadDate": "2026-08-11"
   }
 ]
