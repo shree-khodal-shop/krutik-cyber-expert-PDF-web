@@ -3,16 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>KRUTIK CYBER EXPERT — PDF Library + Gallery</title>
+<title>KRUTIK CYBER EXPERT — PDF Library</title>
 <style>
-  /* ============================================================
-     FONTS
-     ============================================================ */
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700;800&family=Orbitron:wght@400;600;700;900&display=swap');
 
-  /* ============================================================
-     ROOT
-     ============================================================ */
   :root {
     --void: #0A0A0D;
     --void-deep: #050506;
@@ -28,19 +22,8 @@
     --radius: 18px;
   }
 
-  /* ============================================================
-     RESET
-     ============================================================ */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
     margin: 0;
     background: var(--void);
@@ -50,32 +33,12 @@
     perspective: 1200px;
     overflow-x: hidden;
   }
+  ::selection { background: var(--lime); color: var(--void); }
+  .display { font-family: 'Space Grotesk', sans-serif; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  .orbitron { font-family: 'Orbitron', monospace; }
 
-  ::selection {
-    background: var(--lime);
-    color: var(--void);
-  }
-
-  .display {
-    font-family: 'Space Grotesk', sans-serif;
-  }
-  .mono {
-    font-family: 'JetBrains Mono', monospace;
-  }
-  .orbitron {
-    font-family: 'Orbitron', monospace;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    * {
-      animation: none !important;
-      transition: none !important;
-    }
-  }
-
-  /* ============================================================
-     HACKER BACKGROUND
-     ============================================================ */
+  /* HACKER BACKGROUND */
   .hacker-bg {
     position: fixed;
     inset: 0;
@@ -84,7 +47,6 @@
     overflow: hidden;
     background: var(--void-deep);
   }
-
   .matrix-rain {
     position: absolute;
     inset: 0;
@@ -100,41 +62,18 @@
     font-size: 14px;
   }
   @keyframes matrixFall {
-    0% {
-      transform: translateY(-100vh) scale(0.5);
-      opacity: 0;
-    }
-    10% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(100vh) scale(1.2);
-      opacity: 0;
-    }
+    0% { transform: translateY(-100vh) scale(0.5); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(100vh) scale(1.2); opacity: 0; }
   }
-
   .glitch-scan {
     position: absolute;
     inset: 0;
-    background: repeating-linear-gradient(0deg,
-        transparent 0px,
-        transparent 2px,
-        rgba(198, 255, 61, 0.02) 2px,
-        rgba(198, 255, 61, 0.02) 4px);
+    background: repeating-linear-gradient(0deg, transparent 0px, transparent 2px, rgba(198,255,61,0.02) 2px, rgba(198,255,61,0.02) 4px);
     animation: scanMove 3s linear infinite;
   }
-  @keyframes scanMove {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(20px);
-    }
-  }
-
+  @keyframes scanMove { 0% { transform: translateY(0); } 100% { transform: translateY(20px); } }
   .glitch-flash {
     position: absolute;
     inset: 0;
@@ -142,66 +81,15 @@
     opacity: 0;
     animation: glitchFlash 3s infinite;
   }
-  @keyframes glitchFlash {
-    0%,
-    97%,
-    100% {
-      opacity: 0;
-    }
-    98% {
-      opacity: 0.05;
-    }
-    99% {
-      opacity: 0;
-    }
-  }
-
+  @keyframes glitchFlash { 0%,97%,100% { opacity: 0; } 98% { opacity: 0.05; } 99% { opacity: 0; } }
   .holo-grid {
     position: absolute;
     inset: 0;
-    background-image:
-      linear-gradient(rgba(198, 255, 61, 0.025) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(198, 255, 61, 0.025) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(198,255,61,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(198,255,61,0.025) 1px, transparent 1px);
     background-size: 50px 50px;
     animation: gridPulse 4s ease-in-out infinite;
   }
-  @keyframes gridPulse {
-    0%,
-    100% {
-      opacity: 0.3;
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.8;
-      transform: scale(1.05);
-    }
-  }
-
-  .float-code {
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
-  }
-  .float-code span {
-    position: absolute;
-    font-family: 'JetBrains Mono', monospace;
-    color: var(--lime);
-    opacity: 0.04;
-    font-size: 12px;
-    animation: floatCode 20s ease-in-out infinite;
-  }
-  @keyframes floatCode {
-    0%,
-    100% {
-      transform: translateY(0) rotate(0deg);
-      opacity: 0.02;
-    }
-    50% {
-      transform: translateY(-30px) rotate(5deg);
-      opacity: 0.08;
-    }
-  }
-
+  @keyframes gridPulse { 0%,100% { opacity: 0.3; transform: scale(1); } 50% { opacity: 0.8; transform: scale(1.05); } }
   .terminal-cursor {
     position: absolute;
     bottom: 30px;
@@ -212,19 +100,9 @@
     opacity: 0.15;
     animation: cursorBlink 1s step-end infinite;
   }
-  @keyframes cursorBlink {
-    0%,
-    100% {
-      opacity: 0.15;
-    }
-    50% {
-      opacity: 0.6;
-    }
-  }
+  @keyframes cursorBlink { 0%,100% { opacity: 0.15; } 50% { opacity: 0.6; } }
 
-  /* ============================================================
-     MAIN APP — 3D WRAPPER
-     ============================================================ */
+  /* MAIN APP */
   .app-3d {
     position: relative;
     z-index: 1;
@@ -235,9 +113,7 @@
     transform: rotateX(1.2deg) rotateY(0.8deg) translateZ(10px);
   }
 
-  /* ============================================================
-     HEADER
-     ============================================================ */
+  /* HEADER */
   header {
     position: sticky;
     top: 14px;
@@ -250,7 +126,6 @@
     transform: translateZ(30px);
     margin-bottom: 10px;
   }
-
   .header-inner {
     max-width: 1100px;
     margin: 0 auto;
@@ -260,7 +135,6 @@
     gap: 14px;
     flex-wrap: wrap;
   }
-
   .logo-mark {
     width: 18px;
     height: 18px;
@@ -270,18 +144,7 @@
     box-shadow: 0 0 20px var(--lime-glow);
     animation: logoPulse 2s ease-in-out infinite;
   }
-  @keyframes logoPulse {
-    0%,
-    100% {
-      box-shadow: 0 0 20px var(--lime-glow);
-      transform: rotate(45deg) scale(1);
-    }
-    50% {
-      box-shadow: 0 0 60px var(--lime-glow);
-      transform: rotate(45deg) scale(1.1);
-    }
-  }
-
+  @keyframes logoPulse { 0%,100% { box-shadow: 0 0 20px var(--lime-glow); transform: rotate(45deg) scale(1); } 50% { box-shadow: 0 0 60px var(--lime-glow); transform: rotate(45deg) scale(1.1); } }
   .brand h1 {
     font-family: 'Orbitron', monospace;
     font-size: 17px;
@@ -291,17 +154,12 @@
     background-clip: text;
     color: transparent;
   }
-  .brand p {
-    font-size: 10.5px;
-    color: var(--muted);
-    margin: 3px 0 0;
-  }
-
+  .brand p { font-size: 10.5px; color: var(--muted); margin: 3px 0 0; }
   #search {
     flex: 1;
     min-width: 180px;
-    background: rgba(5, 5, 6, 0.7);
-    border: 1px solid rgba(198, 255, 61, 0.12);
+    background: rgba(5,5,6,0.7);
+    border: 1px solid rgba(198,255,61,0.12);
     color: var(--paper);
     padding: 10px 14px 10px 38px;
     border-radius: 999px;
@@ -311,549 +169,220 @@
     background-position: 12px center;
     background-size: 16px;
   }
-  #search:focus {
-    outline: none;
-    border-color: var(--lime);
-    box-shadow: 0 0 30px var(--lime-glow);
-  }
+  #search:focus { outline: none; border-color: var(--lime); box-shadow: 0 0 30px var(--lime-glow); }
 
-  /* ============================================================
-     HERO
-     ============================================================ */
-  .hero {
-    padding: 48px 0 0;
-    border-bottom: 1px solid var(--line);
-    transform: translateZ(20px);
-  }
+  /* HERO */
+  .hero { padding: 48px 0 0; border-bottom: 1px solid var(--line); transform: translateZ(20px); }
+  .eyebrow { color: var(--lime); font-size: 12px; letter-spacing: 3px; font-weight: 700; animation: blinkText 2s ease-in-out infinite; }
+  @keyframes blinkText { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+  .hero h2 { font-family: 'Orbitron', monospace; font-size: clamp(30px, 6vw, 50px); font-weight: 700; line-height: 1.02; margin: 14px 0 12px; max-width: 680px; }
+  .hero h2 span { color: var(--lime); text-shadow: 0 0 40px var(--lime-glow); }
+  .hero p { color: var(--muted); font-size: 15px; max-width: 520px; line-height: 1.6; }
 
-  .eyebrow {
-    color: var(--lime);
-    font-size: 12px;
-    letter-spacing: 3px;
-    font-weight: 700;
-    animation: blinkText 2s ease-in-out infinite;
-  }
-  @keyframes blinkText {
-    0%,
-    100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.4;
-    }
-  }
-
-  .hero h2 {
-    font-family: 'Orbitron', monospace;
-    font-size: clamp(30px, 6vw, 50px);
-    font-weight: 700;
-    line-height: 1.02;
-    margin: 14px 0 12px;
-    max-width: 680px;
-  }
-  .hero h2 span {
-    color: var(--lime);
-    text-shadow: 0 0 40px var(--lime-glow);
-  }
-  .hero p {
-    color: var(--muted);
-    font-size: 15px;
-    max-width: 520px;
-    line-height: 1.6;
-  }
-
-  /* --- SOCIAL LINKS --- */
-  .social-links {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-  }
+  .social-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
   .social-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    background: rgba(198, 255, 61, 0.04);
-    border: 1px solid var(--line);
-    color: var(--paper);
-    padding: 9px 16px;
-    border-radius: 999px;
-    font-size: 13px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    display: inline-flex; align-items: center; gap: 7px;
+    background: rgba(198,255,61,0.04); border: 1px solid var(--line);
+    color: var(--paper); padding: 9px 16px; border-radius: 999px;
+    font-size: 13px; font-weight: 500; text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.23,1,0.32,1);
     transform: translateZ(10px);
   }
-  .social-links a:hover {
-    border-color: var(--lime);
-    color: var(--lime);
-    transform: translateZ(25px) scale(1.05);
-    box-shadow: 0 0 40px var(--lime-glow);
-  }
+  .social-links a:hover { border-color: var(--lime); color: var(--lime); transform: translateZ(25px) scale(1.05); box-shadow: 0 0 40px var(--lime-glow); }
 
-  /* --- STATS --- */
-  .stats {
-    display: flex;
-    gap: 32px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-  }
-  .stat b {
-    display: block;
-    font-family: 'Orbitron', monospace;
-    font-size: 28px;
-    font-weight: 700;
-  }
-  .stat span {
-    font-size: 11.5px;
-    color: var(--muted);
-  }
+  .stats { display: flex; gap: 32px; margin-top: 20px; flex-wrap: wrap; }
+  .stat b { display: block; font-family: 'Orbitron', monospace; font-size: 28px; font-weight: 700; }
+  .stat span { font-size: 11.5px; color: var(--muted); }
 
-  /* ============================================================
-     PHOTO / GALLERY SECTION — 🖼️ नया सेक्शन
-     ============================================================ */
-  .photo-section {
-    margin-top: 28px;
-    padding: 20px 24px;
-    background: rgba(140, 124, 255, 0.04);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    transform: translateZ(15px);
-    transition: all 0.3s;
-  }
-  .photo-section:hover {
-    border-color: rgba(140, 124, 255, 0.2);
-    box-shadow: 0 0 30px rgba(140, 124, 255, 0.1);
-    transform: translateZ(25px);
-  }
-  .photo-section .section-title {
-    font-family: 'Orbitron', monospace;
-    font-size: 14px;
-    color: var(--violet);
-    margin-bottom: 14px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .photo-section .section-title i {
-    font-size: 18px;
-  }
-  .photo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 12px;
-  }
-  .photo-item {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid var(--line);
-    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-    transform: translateZ(5px);
-    aspect-ratio: 1/1;
-    background: var(--void-deep);
-    cursor: pointer;
-  }
-  .photo-item:hover {
-    transform: translateZ(20px) scale(1.04);
-    border-color: var(--violet);
-    box-shadow: 0 0 40px rgba(140, 124, 255, 0.15);
-  }
-  .photo-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: 0.3s;
-  }
-  .photo-item:hover img {
-    transform: scale(1.05);
-  }
-  .photo-item .photo-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 8px 10px;
-    background: linear-gradient(transparent, rgba(5, 5, 6, 0.8));
-    font-size: 10px;
-    font-weight: 500;
-    color: var(--paper);
-    opacity: 0;
-    transition: 0.3s;
-    font-family: 'Orbitron', monospace;
-    letter-spacing: 0.5px;
-  }
-  .photo-item:hover .photo-overlay {
-    opacity: 1;
-  }
-  .photo-item .photo-placeholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    color: var(--muted);
-    font-size: 28px;
-    background: var(--void-deep);
-  }
+  /* PHOTO SECTION */
+  .photo-section { margin-top: 28px; padding: 20px 24px; background: rgba(140,124,255,0.04); border: 1px solid var(--line); border-radius: var(--radius); transform: translateZ(15px); transition: all 0.3s; }
+  .photo-section:hover { border-color: rgba(140,124,255,0.2); box-shadow: 0 0 30px rgba(140,124,255,0.1); transform: translateZ(25px); }
+  .photo-section .section-title { font-family: 'Orbitron', monospace; font-size: 14px; color: var(--violet); margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+  .photo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+  .photo-item { position: relative; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); transition: all 0.4s; transform: translateZ(5px); aspect-ratio: 1/1; background: var(--void-deep); cursor: pointer; }
+  .photo-item:hover { transform: translateZ(20px) scale(1.04); border-color: var(--violet); box-shadow: 0 0 40px rgba(140,124,255,0.15); }
+  .photo-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: 0.3s; }
+  .photo-item:hover img { transform: scale(1.05); }
+  .photo-item .photo-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 8px 10px; background: linear-gradient(transparent, rgba(5,5,6,0.8)); font-size: 10px; font-weight: 500; color: var(--paper); opacity: 0; transition: 0.3s; font-family: 'Orbitron', monospace; letter-spacing: 0.5px; }
+  .photo-item:hover .photo-overlay { opacity: 1; }
+  .photo-item .photo-placeholder { display: flex; align-items: center; justify-content: center; height: 100%; color: var(--muted); font-size: 28px; background: var(--void-deep); }
 
-  /* ============================================================
-     PDF LINK SECTION
-     ============================================================ */
-  .pdf-link-section {
-    margin-top: 20px;
-    padding: 20px 24px;
-    background: rgba(198, 255, 61, 0.03);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    transform: translateZ(15px);
-    transition: all 0.3s;
-  }
-  .pdf-link-section:hover {
-    border-color: rgba(198, 255, 61, 0.15);
-    box-shadow: 0 0 30px var(--lime-glow);
-    transform: translateZ(25px);
-  }
-  .pdf-link-section .section-title {
-    font-family: 'Orbitron', monospace;
-    font-size: 14px;
-    color: var(--lime);
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .pdf-link-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-  }
-  .pdf-link-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(5, 5, 6, 0.5);
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    padding: 8px 12px;
-    transition: all 0.3s;
-    text-decoration: none;
-    color: var(--paper);
-    font-size: 13px;
-  }
-  .pdf-link-item:hover {
-    border-color: var(--lime);
-    transform: translateZ(10px);
-    box-shadow: 0 0 20px var(--lime-glow);
-  }
-  .pdf-link-item .link-icon {
-    color: var(--lime);
-    font-size: 16px;
-  }
-  .pdf-link-item .link-name {
-    flex: 1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .pdf-link-item .link-dl {
-    color: var(--lime);
-    font-size: 14px;
-    opacity: 0.6;
-    transition: 0.3s;
-  }
-  .pdf-link-item:hover .link-dl {
-    opacity: 1;
-  }
+  /* PDF LINK SECTION */
+  .pdf-link-section { margin-top: 20px; padding: 20px 24px; background: rgba(198,255,61,0.03); border: 1px solid var(--line); border-radius: var(--radius); transform: translateZ(15px); transition: all 0.3s; }
+  .pdf-link-section:hover { border-color: rgba(198,255,61,0.15); box-shadow: 0 0 30px var(--lime-glow); transform: translateZ(25px); }
+  .pdf-link-section .section-title { font-family: 'Orbitron', monospace; font-size: 14px; color: var(--lime); margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+  .pdf-link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .pdf-link-item { display: flex; align-items: center; gap: 8px; background: rgba(5,5,6,0.5); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; transition: all 0.3s; text-decoration: none; color: var(--paper); font-size: 13px; }
+  .pdf-link-item:hover { border-color: var(--lime); transform: translateZ(10px); box-shadow: 0 0 20px var(--lime-glow); }
+  .pdf-link-item .link-icon { color: var(--lime); font-size: 16px; }
+  .pdf-link-item .link-name { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .pdf-link-item .link-dl { color: var(--lime); font-size: 14px; opacity: 0.6; transition: 0.3s; }
+  .pdf-link-item:hover .link-dl { opacity: 1; }
 
-  /* --- MARQUEE --- */
-  .marquee-wrap {
-    border-top: 1px solid var(--line);
-    margin-top: 20px;
-    overflow: hidden;
-    padding: 12px 0;
-  }
-  .marquee-track {
-    display: flex;
-    width: max-content;
-    animation: marquee 20s linear infinite;
-  }
-  @keyframes marquee {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
-    }
-  }
-  .marquee-item {
-    display: flex;
-    align-items: center;
-    gap: 22px;
-    padding: 0 22px;
-    color: var(--muted);
-    font-size: 11.5px;
-    letter-spacing: 1.5px;
-    white-space: nowrap;
-  }
-  .marquee-item .dot {
-    color: var(--lime);
-    animation: dotPulse 1s ease-in-out infinite;
-  }
-  @keyframes dotPulse {
-    0%,
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.2;
-      transform: scale(0.5);
-    }
-  }
+  .marquee-wrap { border-top: 1px solid var(--line); margin-top: 20px; overflow: hidden; padding: 12px 0; }
+  .marquee-track { display: flex; width: max-content; animation: marquee 20s linear infinite; }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .marquee-item { display: flex; align-items: center; gap: 22px; padding: 0 22px; color: var(--muted); font-size: 11.5px; letter-spacing: 1.5px; white-space: nowrap; }
+  .marquee-item .dot { color: var(--lime); animation: dotPulse 1s ease-in-out infinite; }
+  @keyframes dotPulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.2; transform: scale(0.5); } }
 
-  /* ============================================================
-     FILTERS
-     ============================================================ */
-  .filters {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-top: 20px;
-    transform: translateZ(15px);
-  }
-  .chip {
-    background: rgba(198, 255, 61, 0.03);
-    border: 1px solid var(--line);
-    color: var(--muted);
-    padding: 7px 16px;
-    border-radius: 999px;
-    font-size: 12px;
-    cursor: pointer;
-    transition: all 0.3s;
-    transform: translateZ(5px);
-    font-weight: 500;
-  }
-  .chip:hover {
-    border-color: var(--lime);
-    color: var(--paper);
-    transform: translateZ(15px);
-  }
-  .chip.active {
-    background: var(--lime);
-    border-color: var(--lime);
-    color: var(--void);
-    font-weight: 700;
-    transform: translateZ(20px);
-    box-shadow: 0 0 30px var(--lime-glow);
-  }
+  .filters { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 20px; transform: translateZ(15px); }
+  .chip { background: rgba(198,255,61,0.03); border: 1px solid var(--line); color: var(--muted); padding: 7px 16px; border-radius: 999px; font-size: 12px; cursor: pointer; transition: all 0.3s; transform: translateZ(5px); font-weight: 500; }
+  .chip:hover { border-color: var(--lime); color: var(--paper); transform: translateZ(15px); }
+  .chip.active { background: var(--lime); border-color: var(--lime); color: var(--void); font-weight: 700; transform: translateZ(20px); box-shadow: 0 0 30px var(--lime-glow); }
 
-  /* ============================================================
-     PDF GRID — 3D CARDS
-     ============================================================ */
-  .grid {
-    display: grid;
-    gap: 18px;
-    margin-top: 22px;
-    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-  }
+  .grid { display: grid; gap: 18px; margin-top: 22px; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); }
+  .card { background: rgba(10,10,13,0.7); backdrop-filter: blur(8px); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: all 0.4s; transform: translateZ(10px); box-shadow: 0 20px 50px rgba(0,0,0,0.7); position: relative; }
+  .card::before { content: ''; position: absolute; inset: -1px; border-radius: var(--radius); padding: 1px; background: linear-gradient(135deg, var(--lime), var(--violet), var(--cyan)); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; opacity: 0; transition: opacity 0.4s; }
+  .card:hover { transform: translateZ(35px) rotateX(1.5deg) scale(1.02); border-color: rgba(198,255,61,0.15); }
+  .card:hover::before { opacity: 0.6; }
+  .card-body { padding: 18px 20px; display: flex; flex-direction: column; flex: 1; }
+  .cat-row { display: flex; align-items: center; justify-content: space-between; }
+  .cat { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; font-family: 'Orbitron', monospace; }
+  .card-mark { width: 10px; height: 10px; border: 1.5px solid var(--line); transform: rotate(45deg); flex-shrink: 0; transition: all 0.3s; }
+  .card:hover .card-mark { border-color: var(--lime); box-shadow: 0 0 20px var(--lime-glow); transform: rotate(90deg); }
+  .card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 16.5px; font-weight: 600; margin: 10px 0 0; line-height: 1.32; }
+  .card p.desc { color: #7C7C84; font-size: 13px; margin: 6px 0 0; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .card-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
+  .meta { color: #5A5A60; font-size: 11px; font-family: 'JetBrains Mono', monospace; }
+  .dl-btn { background: var(--lime); color: var(--void); border: none; padding: 8px 16px; border-radius: 999px; font-size: 12px; font-weight: 700; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: all 0.3s; transform: translateZ(5px); }
+  .dl-btn:hover { transform: translateZ(15px) scale(1.05); box-shadow: 0 0 40px var(--lime-glow); }
 
-  .card {
-    background: rgba(10, 10, 13, 0.7);
-    backdrop-filter: blur(8px);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-    transform: translateZ(10px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
-    position: relative;
-  }
-  .card::before {
-    content: '';
-    position: absolute;
-    inset: -1px;
-    border-radius: var(--radius);
-    padding: 1px;
-    background: linear-gradient(135deg, var(--lime), var(--violet), var(--cyan));
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: 0;
-    transition: opacity 0.4s;
-  }
-  .card:hover {
-    transform: translateZ(35px) rotateX(1.5deg) scale(1.02);
-    border-color: rgba(198, 255, 61, 0.15);
-  }
-  .card:hover::before {
-    opacity: 0.6;
-  }
+  .empty { text-align: center; padding: 90px 20px; color: var(--muted); transform: translateZ(15px); }
+  .empty .icon { width: 60px; height: 60px; border: 1.5px solid var(--line); transform: rotate(45deg); display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 28px; transition: all 0.3s; }
+  .empty .icon:hover { transform: rotate(0deg) scale(1.1); border-color: var(--lime); box-shadow: 0 0 40px var(--lime-glow); }
 
-  .card-body {
-    padding: 18px 20px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-  }
-  .cat-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .cat {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    font-family: 'Orbitron', monospace;
-  }
-  .card-mark {
-    width: 10px;
-    height: 10px;
-    border: 1.5px solid var(--line);
-    transform: rotate(45deg);
-    flex-shrink: 0;
-    transition: all 0.3s;
-  }
-  .card:hover .card-mark {
-    border-color: var(--lime);
-    box-shadow: 0 0 20px var(--lime-glow);
-    transform: rotate(90deg);
-  }
-  .card h3 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 16.5px;
-    font-weight: 600;
-    margin: 10px 0 0;
-    line-height: 1.32;
-  }
-  .card p.desc {
-    color: #7C7C84;
-    font-size: 13px;
-    margin: 6px 0 0;
-    line-height: 1.5;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  .card-foot {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 16px;
-    padding-top: 14px;
-    border-top: 1px solid var(--line);
-  }
-  .meta {
-    color: #5A5A60;
-    font-size: 11px;
-    font-family: 'JetBrains Mono', monospace;
-  }
-  .dl-btn {
-    background: var(--lime);
-    color: var(--void);
-    border: none;
-    padding: 8px 16px;
-    border-radius: 999px;
-    font-size: 12px;
-    font-weight: 700;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    transition: all 0.3s;
-    transform: translateZ(5px);
-  }
-  .dl-btn:hover {
-    transform: translateZ(15px) scale(1.05);
-    box-shadow: 0 0 40px var(--lime-glow);
-  }
+  footer { max-width: 1100px; margin: 0 auto; padding: 26px 20px; border-top: 1px solid var(--line); color: #4A4A50; font-size: 11px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; transform: translateZ(10px); }
 
-  /* ============================================================
-     EMPTY STATE
-     ============================================================ */
-  .empty {
-    text-align: center;
-    padding: 90px 20px;
-    color: var(--muted);
-    transform: translateZ(15px);
-  }
-  .empty .icon {
-    width: 60px;
-    height: 60px;
-    border: 1.5px solid var(--line);
-    transform: rotate(45deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 24px;
-    font-size: 28px;
-    transition: all 0.3s;
-  }
-  .empty .icon:hover {
-    transform: rotate(0deg) scale(1.1);
-    border-color: var(--lime);
-    box-shadow: 0 0 40px var(--lime-glow);
-  }
-
-  /* ============================================================
-     FOOTER
-     ============================================================ */
-  footer {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 26px 20px;
-    border-top: 1px solid var(--line);
-    color: #4A4A50;
-    font-size: 11px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 8px;
-    transform: translateZ(10px);
-  }
-
-  /* ============================================================
-     RESPONSIVE
-     ============================================================ */
   @media (max-width: 520px) {
-    .stats {
-      gap: 20px;
-    }
-    .brand h1 {
-      font-size: 14px;
-    }
-    .header-inner {
-      padding: 12px 14px;
-    }
-    .grid {
-      grid-template-columns: 1fr;
-    }
-    .photo-grid {
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    }
-    .pdf-link-grid {
-      grid-template-columns: 1fr;
-    }
-    .float-code span {
-      display: none;
-    }
-    .terminal-cursor {
-      display: none;
-    }
+    .stats { gap: 20px; }
+    .brand h1 { font-size: 14px; }
+    .header-inner { padding: 12px 14px; }
+    .grid { grid-template-columns: 1fr; }
+    .photo-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
+    .pdf-link-grid { grid-template-columns: 1fr; }
+    .terminal-cursor { display: none; }
   }
 </style>
 </head>
 <body>
 
-  <!-- ============================================================
-       HACKER BACKGROUND
-       ============================================================ -->
+  <!-- HACKER BACKGROUND -->
   <div class="hacker-bg">
     <div class="matrix-rain" id="matrixRain"></div>
-    <div class=
+    <div class="glitch-scan"></div>
+    <div class="glitch-flash"></div>
+    <div class="holo-grid"></div>
+    <div class="terminal-cursor">root@kce:~$ <span style="animation: cursorBlink 1s step-end infinite;">█</span></div>
+  </div>
+
+  <!-- MAIN APP -->
+  <div class="app-3d">
+
+    <!-- HEADER -->
+    <header>
+      <div class="header-inner">
+        <div class="brand">
+          <div class="logo-mark"></div>
+          <div>
+            <h1>KRUTIK CYBER EXPERT</h1>
+            <p class="mono" id="countLabel">0 PDF · Free Course Downloads</p>
+          </div>
+        </div>
+        <input id="search" type="text" placeholder="Search by title or topic…" />
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <p class="eyebrow mono">⚡ 100% FREE · NO SIGN-UP REQUIRED ⚡</p>
+      <h2 class="display">Every course PDF,<br/><span>one click away.</span></h2>
+      <p>This is the KRUTIK CYBER EXPERT course library — free study material, download anytime.</p>
+
+      <div class="social-links">
+        <a href="https://www.instagram.com/hacker_by_expert" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://t.me/KRUTIK_CYBER_EXPERT" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
+        <a href="https://shree-khodal-shop.github.io/krutik-cyber-expert-PDF-web/" target="_blank"><i class="fas fa-globe"></i> GitHub Pages</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><b id="statTotal">0</b><span>Total PDFs</span></div>
+        <div class="stat"><b id="statCats">0</b><span>Categories</span></div>
+        <div class="stat"><b id="statLinks">0</b><span>Direct Links</span></div>
+        <div class="stat"><b id="statPhotos">0</b><span>Photos</span></div>
+      </div>
+
+      <!-- PHOTO SECTION -->
+      <div class="photo-section">
+        <div class="section-title"><i class="fas fa-images"></i> 🖼️ Course Gallery</div>
+        <div class="photo-grid" id="photoGrid"></div>
+      </div>
+
+      <!-- PDF LINK SECTION -->
+      <div class="pdf-link-section">
+        <div class="section-title"><i class="fas fa-link"></i> 🔗 Direct PDF Links</div>
+        <div class="pdf-link-grid" id="pdfLinkGrid"></div>
+      </div>
+
+      <div class="marquee-wrap">
+        <div class="marquee-track" id="marqueeTrack"></div>
+      </div>
+    </section>
+
+    <div class="filters" id="filters"></div>
+    <div id="grid" class="grid"></div>
+    <div id="emptyState" class="empty" style="display:none;">
+      <div class="icon">📄</div>
+      <h3 id="emptyTitle">No files yet</h3>
+      <p id="emptyText">Check back soon — new PDFs are added regularly.</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <span>KRUTIK CYBER EXPERT — all course PDFs are free to download.</span>
+    <span class="mono">FREE · FOREVER</span>
+  </footer>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script>
+    // MATRIX RAIN
+    (function() {
+      const container = document.getElementById('matrixRain');
+      const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+{}:<>?~';
+      for (let i = 0; i < 150; i++) {
+        const span = document.createElement('span');
+        span.textContent = chars[Math.floor(Math.random() * chars.length)];
+        span.style.left = Math.random() * 100 + '%';
+        span.style.animationDuration = (5 + Math.random() * 15) + 's';
+        span.style.animationDelay = (Math.random() * 15) + 's';
+        span.style.fontSize = (10 + Math.random() * 16) + 'px';
+        span.style.opacity = 0.15 + Math.random() * 0.6;
+        container.appendChild(span);
+      }
+    })();
+
+    const TAG_COLORS = ["#C6FF3D", "#8C7CFF", "#4CC9F0", "#FF8A5B", "#FF6B5B", "#5DE0A6"];
+    function hashStr(s) { let h = 0; for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0; return h; }
+    function tagColor(cat) { return TAG_COLORS[hashStr(cat || "General") % TAG_COLORS.length]; }
+    function formatBytes(bytes) { if (!bytes) return "—"; if (bytes < 1024) return bytes + " B"; if (bytes < 1024*1024) return (bytes/1024).toFixed(1) + " KB"; return (bytes/(1024*1024)).toFixed(2) + " MB"; }
+    function formatDate(iso) { try { return new Date(iso).toLocaleDateString("en-IN", { day:"2-digit", month:"short", year:"numeric" }); } catch(e) { return "—"; } }
+
+    let allFiles = [];
+    let allPhotos = [];
+    let activeCategory = "All";
+
+    function escapeHtml(s) { const d = document.createElement("div"); d.textContent = s; return d.innerHTML; }
+
+    function renderPhotos() {
+      const grid = document.getElementById('photoGrid');
+      grid.innerHTML = '';
+      if (allPhotos.length === 0) {
+        const placeholder = document.createElement('div');
+        placeholder.className = 'photo-item';
+        placeholder.innerHTML = `<div class="photo-placeholder"><i class="fas fa-camera"></i></div><div class="photo-overlay">No photos yet</div>`;
+        grid.appendChild(placeholder);
+        document.getElementById('statPhotos').textContent = '0';
+        return;
+     
