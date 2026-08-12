@@ -1,9 +1,9 @@
 [
   {
-    "title": "FULL COURSE ALL TOOLS — Complete Course",
+    "title": "Full Course All Tools — Complete Course",
     "description": "Complete course notes covering all hacking tools and techniques",
     "category": "Hacking",
-    "filename": "full-course-all-tools.pdf",
+    "filename": "learn-coding-complete.pdf",
     "size": 1200000,
     "uploadDate": "2026-08-12"
   },
@@ -16,10 +16,10 @@
     "uploadDate": "2026-08-12"
   },
   {
-    "title": "Termux Telegram Bot Python — Ethical Hacking Full Course",
+    "title": "Termux Telegram Bot — Ethical Hacking Course",
     "description": "Complete Termux Telegram bot development + ethical hacking course",
     "category": "Hacking",
-    "filename": "termux-telegram-bot-hacking.pdf",
+    "filename": "termux-telegram-bot-hacking-course.pdf",
     "size": 850000,
     "uploadDate": "2026-08-12"
   },
