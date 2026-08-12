@@ -1,7 +1,7 @@
 [
   {
-    "title": "Full Course All Tools — Complete Course",
-    "description": "Complete course notes covering all hacking tools and techniques",
+    "title": "Full Course All Tools",
+    "description": "Complete hacking tools course notes",
     "category": "Hacking",
     "filename": "learn-coding-complete.pdf",
     "size": 1200000,
@@ -9,15 +9,15 @@
   },
   {
     "title": "HTML Code Learn",
-    "description": "Complete HTML course notes for beginners",
+    "description": "Complete HTML course notes",
     "category": "Coding",
     "filename": "html-code-learn.pdf",
     "size": 350000,
     "uploadDate": "2026-08-12"
   },
   {
-    "title": "Termux Telegram Bot — Ethical Hacking Course",
-    "description": "Complete Termux Telegram bot development + ethical hacking course",
+    "title": "Termux Telegram Bot — Ethical Hacking",
+    "description": "Termux + Telegram bot + ethical hacking course",
     "category": "Hacking",
     "filename": "termux-telegram-bot-hacking-course.pdf",
     "size": 850000,
@@ -25,7 +25,7 @@
   },
   {
     "title": "Cyber Security Basics",
-    "description": "Beginner level cyber security notes and fundamentals",
+    "description": "Beginner cyber security notes",
     "category": "Cyber Security",
     "filename": "cyber-security-basics.pdf",
     "size": 420000,
@@ -33,7 +33,7 @@
   },
   {
     "title": "CSS Code Learn",
-    "description": "Complete CSS course notes with styling examples",
+    "description": "Complete CSS course notes",
     "category": "Coding",
     "filename": "css-code-learn.pdf",
     "size": 310000,
@@ -41,7 +41,7 @@
   },
   {
     "title": "JavaScript Code Learn",
-    "description": "Complete JavaScript course notes for web development",
+    "description": "Complete JavaScript course notes",
     "category": "Coding",
     "filename": "javascript-code-learn.pdf",
     "size": 680000,
@@ -49,7 +49,7 @@
   },
   {
     "title": "Learn Python Code",
-    "description": "Complete Python programming course notes",
+    "description": "Complete Python course notes",
     "category": "Coding",
     "filename": "learn-code-python.pdf",
     "size": 750000,
@@ -57,7 +57,7 @@
   },
   {
     "title": "PHP Code Learn",
-    "description": "Complete PHP course notes for backend development",
+    "description": "Complete PHP course notes",
     "category": "Coding",
     "filename": "php-code-learn.pdf",
     "size": 520000,
@@ -65,7 +65,7 @@
   },
   {
     "title": "SQL Database Code Learn",
-    "description": "Complete SQL database course notes with queries",
+    "description": "Complete SQL database course notes",
     "category": "Database",
     "filename": "sql-database-code-learn.pdf",
     "size": 480000,
