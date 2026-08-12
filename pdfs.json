@@ -1,82 +1,74 @@
 [
   {
     "title": "FULL COURSE ALL TOOLS — Complete Course",
-    "description": "Complete coding course notes",
-    "category": "Coding",
-    "filename": "learn-coding-complete.pdf",
-    "size": 500000,
-    "uploadDate": "2026-08-11"
+    "description": "Complete course notes covering all hacking tools and techniques",
+    "category": "Hacking",
+    "filename": "full-course-all-tools.pdf",
+    "size": 1200000,
+    "uploadDate": "2026-08-12"
   },
   {
     "title": "HTML Code Learn",
-    "description": "Complete coding course notes",
+    "description": "Complete HTML course notes for beginners",
     "category": "Coding",
     "filename": "html-code-learn.pdf",
-    "size": 500000,
-    "uploadDate": "2026-08-11"
+    "size": 350000,
+    "uploadDate": "2026-08-12"
   },
   {
     "title": "Termux Telegram Bot Python — Ethical Hacking Full Course",
-    "description": "Complete coding course notes",
-    "category": "Coding Hacking",
-    "filename": "termux-telegram-bot-hacking-course.pdf",
-    "size": 500000,
-    "uploadDate": "2026-08-11"
+    "description": "Complete Termux Telegram bot development + ethical hacking course",
+    "category": "Hacking",
+    "filename": "termux-telegram-bot-hacking.pdf",
+    "size": 850000,
+    "uploadDate": "2026-08-12"
   },
   {
     "title": "Cyber Security Basics",
-    "description": "Beginner level cyber security notes",
+    "description": "Beginner level cyber security notes and fundamentals",
     "category": "Cyber Security",
     "filename": "cyber-security-basics.pdf",
-    "size": 500000,
-    "uploadDate": "2026-08-11"
+    "size": 420000,
+    "uploadDate": "2026-08-12"
   },
   {
     "title": "CSS Code Learn",
-    "description": "Complete CSS course notes",
+    "description": "Complete CSS course notes with styling examples",
     "category": "Coding",
     "filename": "css-code-learn.pdf",
-    "size": 500000,
-    "uploadDate": "2026-08-11"
+    "size": 310000,
+    "uploadDate": "2026-08-12"
   },
   {
     "title": "JavaScript Code Learn",
-    "description": "Complete JavaScript course notes",
+    "description": "Complete JavaScript course notes for web development",
     "category": "Coding",
     "filename": "javascript-code-learn.pdf",
-    "size": 500000,
-    "uploadDate": "2026-08-11"
+    "size": 680000,
+    "uploadDate": "2026-08-12"
   },
   {
     "title": "Learn Python Code",
-    "description": "Complete Python course notes",
+    "description": "Complete Python programming course notes",
     "category": "Coding",
     "filename": "learn-code-python.pdf",
-    "size": 500000,
-    "uploadDate": "2026-08-11"
+    "size": 750000,
+    "uploadDate": "2026-08-12"
   },
   {
     "title": "PHP Code Learn",
-    "description": "Complete PHP course notes",
+    "description": "Complete PHP course notes for backend development",
     "category": "Coding",
     "filename": "php-code-learn.pdf",
-    "size": 500000,
-    "uploadDate": "2026-08-11"
+    "size": 520000,
+    "uploadDate": "2026-08-12"
   },
   {
     "title": "SQL Database Code Learn",
-    "description": "Complete SQL database course notes",
-    "category": "Coding",
+    "description": "Complete SQL database course notes with queries",
+    "category": "Database",
     "filename": "sql-database-code-learn.pdf",
-    "size": 500000,
-    "uploadDate": "2026-08-11"
-  },
-  {
-    "title": "smit-chovatiya-baby❤️😅😁",
-    "description": "smit-chovatiya Instagram love scam",
-    "category": "scam-Instagram",
-    "filename": "smit-chovatiya.jpg",
-    "size": 500000,
+    "size": 480000,
     "uploadDate": "2026-08-12"
-}
+  }
 ]
